@@ -1,0 +1,8 @@
+node_modules
+package.json
+package-lock.json
+yarn.lock
+secrets.js
+.DS_Store
+public/bundle.js
+public/bundle.js.map
