@@ -11,6 +11,8 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
+// const task = require('./api/eventManagerCreationStatus')
+
 module.exports = app
 
 /**
@@ -105,3 +107,5 @@ if (require.main === module) {
 } else {
   createApp()
 }
+
+// task.start();
