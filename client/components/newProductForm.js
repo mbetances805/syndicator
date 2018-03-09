@@ -46,111 +46,118 @@ class NewProductForm extends Component {
 
   render() {
     return (
-      <div className="new-product-form">
-        <header><h2>Add new Events</h2></header>
-        <div className="row">
-          <form onSubmit={this.handleSubmit}>
-            <div className="row">
-              <label>Category</label>
+      <div className="container">
+        <div className="new-product-form">
+          <div className="header"><h2>New Events Form</h2></div>
+          <div className="row">
+            <form onSubmit={this.handleSubmit}>
+              <div className="row">
+                <div className="input-field">
+                  <label>Category*</label>
+                  {/* need to update to get values from ENUM in database */}
+                  <select
+                    name="productCategory"
+                    onChange={this.handleChange}
+                    value={this.state.newProduct.productCategory}
+                  >
+                    <option value="Events">Events</option>
+                  </select>
+              </div>
               <div className="input-field">
-                {/* need to update to get values from ENUM in database */}
+                <label>Event Name*</label>
+                <input
+                  type="text"
+                  name="productName"
+                  onChange={this.handleChange}
+                  value={this.state.newProduct.productName}
+                  placeholder="Event Name"
+                />
+              </div>
+              <div className="input-field">
+                <label>Headline*</label>
+                <input
+                  type="text"
+                  name="productHeadline"
+                  onChange={this.handleChange}
+                  value={this.state.newProduct.productHeadline}
+                  placeholder="Headline"
+                />
+              </div>
+              <div className="input-field">
+                <label>Description*</label>
+                <textarea
+                  className="textarea"
+                  name="productDescription"
+                  cols="40"
+                  rows="5"
+                  onChange={this.handleChange}
+                  value={this.state.newProduct.productDescription}
+                  placeholder="Description"
+                />
+              </div>
+              <div className="input-field">
+                <label>Fine Print*</label>
+                <textarea
+                  className="textarea"
+                  name="productFinePrint"
+                  cols="40"
+                  rows="5"
+                  onChange={this.handleChange}
+                  value={this.state.newProduct.productFinePrint}
+                  placeholder="Fine Print"
+                />
+              </div>
+              <div className="input-field">
+              <label>Address*</label>
+                <textarea
+                  className="textarea"
+                  name="productAddress"
+                  cols="40"
+                  rows="5"
+                  onChange={this.handleChange}
+                  value={this.state.newProduct.productAddress}
+                  placeholder="Address"
+                />
+              </div>
+              {/* need to update to get values from ENUM in database */}
+              <div className="input-field">
+                <label>Status*</label>
                 <select
-                  name="productCategory"
+                  name="productStatus"
                   onChange={this.handleChange}
-                  value={this.state.newProduct.productCategory}
+                  value={this.state.newProduct.productStatus}
                 >
-                  <option value="Events">Events</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
                 </select>
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="productName"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productName}
-                placeholder="Event Name"
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="productHeadline"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productHeadline}
-                placeholder="Headline"
-              />
-            </div>
-            <div className="input-field">
-              <textarea
-                className="textarea"
-                name="productDescription"
-                cols="40"
-                rows="5"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productDescription}
-                placeholder="Description"
-              />
-            </div>
-            <div className="input-field">
-              <textarea
-                className="textarea"
-                name="productFinePrint"
-                cols="40"
-                rows="5"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productFinePrint}
-                placeholder="Fine Print"
-              />
-            </div>
-            <div className="input-field">
-              <textarea
-                className="textarea"
-                name="productAddress"
-                cols="40"
-                rows="5"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productAddress}
-                placeholder="Address"
-              />
-            </div>
-            {/* need to update to get values from ENUM in database */}
-            <div className="input-field">
-              <label>Status</label>
-              <select
-                name="productStatus"
-                onChange={this.handleChange}
-                value={this.state.newProduct.productStatus}
-              >
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-              </select>
+                </div>
+                <div className="input-field">
+                  <label>Start Date*</label>
+                  <input
+                    className="datepicker"
+                    type="datetime-local"
+                    name="productStartDate"
+                    onChange={this.handleChange}
+                    value={this.state.newProduct.productStartDate}
+                  />
+                </div>
+                {/* need to validate date is after Start Date */}
+                <div className="input-field">
+                  <label>End Date*</label>
+                  <input
+                    className="datepicker"
+                    type="datetime-local"
+                    name="productEndDate"
+                    onChange={this.handleChange}
+                    value={this.state.newProduct.productEndDate}
+                  />
+                </div>
+                <button className="submit-button" type="submit" name="action">
+                  Submit
+                </button>
               </div>
-              <label>Start Date</label>
-              <div className="input-field">
-                <input
-                  className="datepicker"
-                  type="datetime-local"
-                  name="productStartDate"
-                  onChange={this.handleChange}
-                  value={this.state.newProduct.productStartDate}
-                />
-              </div>
-              {/* need to validate date is after Start Date */}
-              <label>End Date</label>
-              <div className="input-field">
-                <input
-                  className="datepicker"
-                  type="datetime-local"
-                  name="productEndDate"
-                  onChange={this.handleChange}
-                  value={this.state.newProduct.productEndDate}
-                />
-              </div>
-              <button type="submit" name="action">
-                Submit
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     )

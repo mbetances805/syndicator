@@ -15,9 +15,17 @@
 
 - Ideally once an event is posted should get an ID from the Event Management Tool to store in our database for updates
 
-- Due to time constraints, unable to use css style on admin panel
+- Due to time constraints, I was unable to use nice css styling on the admin panel, I would've preferred to use an existing framework like bootstrap or materialize
+
+- Due to time constraints, unable to write unit tests
+
+- An alternative to the admin panel, would've been to use a full featured framework such as Django or Sails.js. These frameworks provide easy management of models, views, serializers, URLs, etc. They also provide admin interfaces, which can be tied directly into the model for swift development
 
 - Cron job set to 5 minute interval
+
+- The form is missing data validation and validation that all fields are populated for submission
+
+- When signing up, user email and password are missing validation
 
 ## Run in localhost
 - run `npm install` to install packages
