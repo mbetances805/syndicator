@@ -4,10 +4,7 @@ const db = require('../db')
 const EventManager = db.define('eventManager', {
   eventManagerName: {
     type: Sequelize.STRING(),
-    allowNull: false,
-    set(val) {
-      this.setDataValue('eventManagerName', val.toUpperCase())
-    }
+    allowNull: false
   },
   eventManagerStatus: {
     type: Sequelize.ENUM('Active', 'Inactive'),

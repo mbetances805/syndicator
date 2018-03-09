@@ -14346,27 +14346,43 @@ var Main = function Main(props) {
         'div',
         null,
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/home' },
-          'Home '
+          'div',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/home' },
+            'Home '
+          )
         ),
         _react2.default.createElement(
-          'a',
-          { href: '#', onClick: handleClick },
-          'Logout'
+          'div',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '#', onClick: handleClick },
+            'Logout'
+          )
         )
       ) : _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/login' },
-          'Login'
+          'div',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/login' },
+            'Login'
+          )
         ),
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/signup' },
-          'Sign Up'
+          'div',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/signup' },
+            'Sign Up'
+          )
         )
       )
     ),
