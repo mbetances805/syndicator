@@ -46,7 +46,6 @@ class NewProductForm extends Component {
 
   render() {
     return (
-      {/* needs css styling */}
       <div className="new-product-form">
         <header><h2>Add new Events</h2></header>
         <div className="row">
