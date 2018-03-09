@@ -52,7 +52,7 @@ const task = cron.schedule('*/5 * * * *', function () {
                           returning: true,
                           plain: true
                         })
-                        .then(eventManager => res.json(eventManager))
+                        .then(eventManager => console.log(eventManager))
                         .catch(error => console.log(error))
                     })
                     .catch(error => console.log(error))

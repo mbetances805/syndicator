@@ -13,9 +13,7 @@
 
 - PostgreSQL database was leveraged
 
-- The POST request currently returns a 500 Internal Server Error
-
-- Ideally should get ID from Event Management Tool to store in database for updates
+- Ideally once an event is posted should get an ID from the Event Management Tool to store in our database for updates
 
 - Due to time constraints, unable to use css style on admin panel
 

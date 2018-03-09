@@ -30,7 +30,7 @@ async function seed () {
       eventManagerName: 'eventbrite',
       eventManagerStatus: 'Active',
       eventManagerUrl: 'https://www.eventbriteapi.com',
-      eventManagerPostPath: '/v3/users/me/events/?token='
+      eventManagerPostPath: '/v3/events/?token='
     })
   ])
 
