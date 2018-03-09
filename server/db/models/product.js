@@ -2,37 +2,37 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Product = db.define('product', {
-  product_category: {
+  productCategory: {
     type: Sequelize.ENUM('Events', 'Fitness'),
     allowNull: false
   },
-  product_name: {
+  productName: {
     type: Sequelize.STRING(),
     allowNull: false
   },
-  product_headline: {
+  productHeadline: {
     type: Sequelize.STRING(),
     allowNull: false
   },
-  product_description: {
+  productDescription: {
     type: Sequelize.TEXT(),
     allowNull: false
   },
-  product_fine_print: {
+  productFinePrint: {
     type: Sequelize.TEXT(),
     allowNull: false
   },
-  product_location: {
+  productLocation: {
     type: Sequelize.TEXT(),
   },
-  product_status: {
+  productStatus: {
     type: Sequelize.ENUM('Active', 'Inactive'),
     allowNull: false
   },
-  product_start_date: {
+  productStartDate: {
     type: Sequelize.DATE
   },
-  product_end_date: {
+  productEndDate: {
     type: Sequelize.DATE
   }
 })

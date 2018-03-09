@@ -7239,8 +7239,6 @@ var _product = __webpack_require__(139);
 
 var _eventManager = __webpack_require__(137);
 
-var _eventManagerCreationStatus = __webpack_require__(138);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7248,9 +7246,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// need to remove for testing purposes only
-// import {fetchProducts, modifyProducts} from '../store/product'
-
 
 var NewProductForm = function (_Component) {
   _inherits(NewProductForm, _Component);
@@ -7427,9 +7422,7 @@ var NewProductForm = function (_Component) {
 var mapState = function mapState(state) {
   return {
     merchantId: state.user.merchantId,
-    eventManagers: state.eventManager.allManagers,
-    // need to delete
-    pendingProducts: state.eventManagerCreationStatus.allManagers
+    eventManagers: state.eventManager.allManagers
   };
 };
 
@@ -7440,13 +7433,6 @@ var mapDispatch = function mapDispatch(dispatch) {
     },
     getEventManagers: function getEventManagers() {
       dispatch((0, _eventManager.fetchManagers)());
-    },
-    // need to remove for testing purposes only
-    getEventManagersStatus: function getEventManagersStatus(products) {
-      dispatch((0, _eventManagerCreationStatus.fetchStatus)(products));
-    },
-    updateStatus: function updateStatus(products) {
-      dispatch((0, _eventManagerCreationStatus.modifyStatus)(products));
     }
   };
 };

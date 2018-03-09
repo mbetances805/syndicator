@@ -5,7 +5,7 @@ module.exports = router
 router.get('/', (req, res, next) => {
   EventManager.findAll({
     where: {
-      event_manager_status: 'Active'
+      eventManagerStatus: 'Active'
     }
   })
     .then(managers => res.json(managers))

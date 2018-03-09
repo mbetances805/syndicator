@@ -2,19 +2,19 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Merchant = db.define('merchant', {
-  merchant_name: {
+  merchantName: {
     type: Sequelize.STRING(),
     allowNull: false
   },
-  merchant_address: {
+  merchantAddress: {
     type: Sequelize.TEXT(),
     allowNull: false
   },
-  merchant_phone_number: {
+  merchantPhoneNumber: {
     type: Sequelize.TEXT(),
     allowNull: false
   },
-  merchant_status: {
+  merchantStatus: {
     type: Sequelize.ENUM('Active', 'Inactive'),
     allowNull: false
   }

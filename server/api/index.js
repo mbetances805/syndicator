@@ -4,7 +4,6 @@ module.exports = router
 router.use('/users', require('./users'))
 router.use('/products', require('./products'))
 router.use('/managers', require('./eventManager'))
-router.use('/managersstatus', require('./eventManagerCreationStatus'))
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')

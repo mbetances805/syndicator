@@ -4,9 +4,6 @@ import PropTypes from 'prop-types'
 import {withRouter} from 'react-router'
 import {postProduct} from '../store/product'
 import {fetchManagers} from '../store/eventManager'
-// need to remove for testing purposes only
-// import {fetchProducts, modifyProducts} from '../store/product'
-import {fetchStatus, modifyStatus} from '../store/eventManagerCreationStatus'
 
 class NewProductForm extends Component {
   constructor() {
@@ -144,9 +141,7 @@ class NewProductForm extends Component {
 
 const mapState = state => ({
   merchantId: state.user.merchantId,
-  eventManagers: state.eventManager.allManagers,
-  // need to delete
-  pendingProducts: state.eventManagerCreationStatus.allManagers
+  eventManagers: state.eventManager.allManagers
 });
 
 const mapDispatch = dispatch => ({
@@ -155,13 +150,6 @@ const mapDispatch = dispatch => ({
   },
   getEventManagers: () => {
     dispatch(fetchManagers())
-  },
-  // need to remove for testing purposes only
-  getEventManagersStatus: (products) => {
-    dispatch(fetchStatus(products))
-  },
-  updateStatus: (products) => {
-    dispatch(modifyStatus(products))
   }
 });
 
