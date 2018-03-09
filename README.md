@@ -7,7 +7,7 @@
 
 - Merchants will have accounts and enter their own events into the admin panel. Hence, the logic gets the merchant info for an event post from the user's merchant ID
 
-- Due to time contraints, only leveraged to work with one API, eventbrite, and had to hardcode the timezone and currency for the POST request. Ideally these data points should be retrieved from the database
+- Due to time contraints, only managed to work with one API, eventbrite, and had to hardcode the timezone and currency for the POST request. Ideally these data points should be retrieved from the database
 
 - The POST request parameters are currently hardcoded for eventbrite, ideally these should be dynamic and adjust based on the API we're working with
 
