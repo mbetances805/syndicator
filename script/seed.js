@@ -1,36 +1,46 @@
-/**
- * Welcome to the seed file! This seed file uses a newer language feature called...
- *
- *                  -=-= ASYNC...AWAIT -=-=
- *
- * Async-await is a joy to use! Read more about it in the MDN docs:
- *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
- *
- * Now that you've got the main idea, check it out in practice below!
- */
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {User, Merchant, EventManager} = require('../server/db/models')
 
 async function seed () {
   await db.sync({force: true})
   console.log('db synced!')
-  // Whoa! Because we `await` the promise that db.sync returns, the next line will not be
-  // executed until that promise resolves!
+
+  const merchants = await Promise.all([
+    Merchant.create({
+      merchantName: 'Doux Supper Club',
+      merchantAddress: '445 Lenox Ave, New York, NY 10036',
+      merchantPhoneNumber: '212-333-3333',
+      merchantStatus: 'Active'
+    }),
+    Merchant.create({
+      merchantName: 'Pinks',
+      merchantAddress: '4457 Lexington Ave, New York, NY 10026',
+      merchantPhoneNumber: '212-335-3333',
+      merchantStatus: 'Active'
+    }),
+  ])
 
   const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+    User.create({email: 'cody@email.com', password: '123', merchantId: '1'}),
+    User.create({email: 'murphy@email.com', password: '123', merchantId: '2'})
   ])
-  // Wowzers! We can even `await` on the right-hand side of the assignment operator
-  // and store the result that the promise resolves to in a variable! This is nice!
+  
+  const eventManager = await Promise.all([
+    EventManager.create({
+      eventManagerName: 'eventbrite',
+      eventManagerStatus: 'Active',
+      eventManagerUrl: 'https://www.eventbriteapi.com',
+      eventManagerPostPath: '/v3/users/me/events/?token='
+    })
+  ])
+
   console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${merchants.length} merchants`)
+  console.log(`seeded ${eventManager.length} event managers`)
   console.log(`seeded successfully`)
+  
 }
 
-// Execute the `seed` function
-// `Async` functions always return a promise, so we can use `catch` to handle any errors
-// that might occur inside of `seed`
 seed()
   .catch(err => {
     console.error(err.message)
@@ -43,9 +53,5 @@ seed()
     console.log('db connection closed')
   })
 
-/*
- * note: everything outside of the async function is totally synchronous
- * The console.log below will occur before any of the logs that occur inside
- * of the async function
- */
+
 console.log('seeding...')

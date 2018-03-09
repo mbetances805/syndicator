@@ -19,7 +19,7 @@ export const fetchStatus = () =>
 export const modifyStatus = products => 
   dispatch =>
       axios.put(`/api/managersstatus`, products)
-        .then(products => {console.log('front end api product', products); dispatch(updateStatus(products))})
+        .then(products => {dispatch(updateStatus(products))})
         .catch(error => console.log(error))
 
 // REDUCER

@@ -1,9 +1,11 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
+// add more values for productCategory
+// add a subcategory for events: performances, nightlife, etc.
 const Product = db.define('product', {
   productCategory: {
-    type: Sequelize.ENUM('Events', 'Fitness'),
+    type: Sequelize.ENUM('Events'),
     allowNull: false
   },
   productName: {

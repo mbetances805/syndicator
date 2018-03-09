@@ -8,7 +8,6 @@ Product.belongsTo(Merchant)
 Product.belongsToMany(EventManager, {through: EventManagerCreationStatus})
 EventManager.belongsToMany(Product, {through: EventManagerCreationStatus})
 User.belongsTo(Merchant)
-EventManager.belongsTo(Product)
 
 module.exports = {
   User,
