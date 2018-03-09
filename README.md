@@ -30,6 +30,6 @@
 - run `npm run seed` to populate database with dummy data
 - open `localhost:8080/home` in browser (Chrome)
 - login with the following credentials -> email: murphy@email.com, password: 123
-- enter your Eventbrite personal token into the secrets file, following this format: 
+- enter your Eventbrite personal token into the secrets file, following this format:\
             `const EVENTBRITE_ACCESS_TOKEN = 'enter your token here'`\
             `module.exports = {EVENTBRITE_ACCESS_TOKEN}`
