@@ -25,7 +25,7 @@ const Product = db.define('product', {
     allowNull: false
   },
   productLocation: {
-    type: Sequelize.TEXT(),
+    type: Sequelize.TEXT()
   },
   productStatus: {
     type: Sequelize.ENUM('Active', 'Inactive'),

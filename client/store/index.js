@@ -7,8 +7,12 @@ import product from './product'
 import eventManager from './eventManager'
 import eventManagerCreationStatus from './eventManagerCreationStatus'
 
-const reducer = combineReducers({user, product, eventManager,
+const reducer = combineReducers({
+  user,
+  product,
+  eventManager,
   eventManagerCreationStatus})
+
 const middleware = composeWithDevTools(applyMiddleware(
   thunkMiddleware,
   createLogger({collapsed: true})

@@ -31,7 +31,7 @@ router.get('/pending', (req, res, next) => {
     where: {
       productStatus: 'Active'
     },
-    include:[{all: true}]
+    include: [{all: true}]
   })
   .then(products => res.json(products))
   .catch(err => console.log(err))

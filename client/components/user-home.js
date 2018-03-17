@@ -11,7 +11,7 @@ export const UserHome = (props) => {
 
   return (
     <div>
-      <div className="welcome-message"><h3>Welcome, {email}</h3></div>
+      <div className='welcome-message'><h3>Welcome, {email}</h3></div>
       <NewProductForm />
     </div>
   )
