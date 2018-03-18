@@ -7320,189 +7320,186 @@ var NewProductForm = function (_Component) {
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'row' },
+            'form',
+            { onSubmit: this.handleSubmit },
             _react2.default.createElement(
-              'form',
-              { onSubmit: this.handleSubmit },
+              'div',
+              { className: 'input-field' },
               _react2.default.createElement(
-                'div',
-                { className: 'row' },
+                'label',
+                null,
+                'Category*'
+              ),
+              _react2.default.createElement(
+                'select',
+                {
+                  name: 'productCategory',
+                  onChange: this.handleChange,
+                  value: this.state.newProduct.productCategory
+                },
                 _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Category*'
-                  ),
-                  _react2.default.createElement(
-                    'select',
-                    {
-                      name: 'productCategory',
-                      onChange: this.handleChange,
-                      value: this.state.newProduct.productCategory
-                    },
-                    _react2.default.createElement(
-                      'option',
-                      { value: 'Events' },
-                      'Events'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Event Name*'
-                  ),
-                  _react2.default.createElement('input', {
-                    type: 'text',
-                    name: 'productName',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productName,
-                    placeholder: 'Event Name'
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Headline*'
-                  ),
-                  _react2.default.createElement('input', {
-                    type: 'text',
-                    name: 'productHeadline',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productHeadline,
-                    placeholder: 'Headline'
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Description*'
-                  ),
-                  _react2.default.createElement('textarea', {
-                    className: 'textarea',
-                    name: 'productDescription',
-                    cols: '40',
-                    rows: '5',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productDescription,
-                    placeholder: 'Description'
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Fine Print*'
-                  ),
-                  _react2.default.createElement('textarea', {
-                    className: 'textarea',
-                    name: 'productFinePrint',
-                    cols: '40',
-                    rows: '5',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productFinePrint,
-                    placeholder: 'Fine Print'
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Address*'
-                  ),
-                  _react2.default.createElement('textarea', {
-                    className: 'textarea',
-                    name: 'productAddress',
-                    cols: '40',
-                    rows: '5',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productAddress,
-                    placeholder: 'Address'
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Status*'
-                  ),
-                  _react2.default.createElement(
-                    'select',
-                    {
-                      name: 'productStatus',
-                      onChange: this.handleChange,
-                      value: this.state.newProduct.productStatus
-                    },
-                    _react2.default.createElement(
-                      'option',
-                      { value: 'active' },
-                      'Active'
-                    ),
-                    _react2.default.createElement(
-                      'option',
-                      { value: 'inactive' },
-                      'Inactive'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'Start Date*'
-                  ),
-                  _react2.default.createElement('input', {
-                    className: 'datepicker',
-                    type: 'datetime-local',
-                    name: 'productStartDate',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productStartDate
-                  })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-field' },
-                  _react2.default.createElement(
-                    'label',
-                    null,
-                    'End Date*'
-                  ),
-                  _react2.default.createElement('input', {
-                    className: 'datepicker',
-                    type: 'datetime-local',
-                    name: 'productEndDate',
-                    onChange: this.handleChange,
-                    value: this.state.newProduct.productEndDate
-                  })
-                ),
-                _react2.default.createElement(
-                  'button',
-                  { className: 'submit-button', type: 'submit', name: 'action' },
-                  'Submit'
+                  'option',
+                  { value: 'Events' },
+                  'Events'
                 )
               )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Event Name*'
+              ),
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'productName',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productName,
+                placeholder: 'Event Name'
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Headline*'
+              ),
+              _react2.default.createElement('input', {
+                type: 'text',
+                name: 'productHeadline',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productHeadline,
+                placeholder: 'Headline'
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Description*'
+              ),
+              _react2.default.createElement('textarea', {
+                className: 'textarea',
+                name: 'productDescription',
+                cols: '40',
+                rows: '5',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productDescription,
+                placeholder: 'Description'
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Fine Print*'
+              ),
+              _react2.default.createElement('textarea', {
+                className: 'textarea',
+                name: 'productFinePrint',
+                cols: '40',
+                rows: '5',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productFinePrint,
+                placeholder: 'Fine Print'
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Address*'
+              ),
+              _react2.default.createElement('textarea', {
+                className: 'textarea',
+                name: 'productAddress',
+                cols: '40',
+                rows: '5',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productAddress,
+                placeholder: 'Address'
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Status*'
+              ),
+              _react2.default.createElement(
+                'select',
+                {
+                  name: 'productStatus',
+                  onChange: this.handleChange,
+                  value: this.state.newProduct.productStatus
+                },
+                _react2.default.createElement(
+                  'option',
+                  { value: 'active' },
+                  'Active'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'inactive' },
+                  'Inactive'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Start Date*'
+              ),
+              _react2.default.createElement('input', {
+                className: 'datepicker',
+                type: 'datetime-local',
+                name: 'productStartDate',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productStartDate
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'input-field' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'End Date*'
+              ),
+              _react2.default.createElement('input', {
+                className: 'datepicker',
+                type: 'datetime-local',
+                name: 'productEndDate',
+                onChange: this.handleChange,
+                value: this.state.newProduct.productEndDate
+              })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'button-container' },
+              _react2.default.createElement(
+                'button',
+                { className: 'submit-button', type: 'submit', name: 'action' },
+                'Submit'
+              )
             )
-          )
+          ),
+          _react2.default.createElement('div', null)
         )
       );
     }
@@ -20383,7 +20380,7 @@ exports = module.exports = __webpack_require__(453)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body nav a {\n    display: inline-block;\n    margin: 1em; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body input, body textarea {\n    border-radius: 8px;\n    border-color: lightgrey; }\n  body input, body select {\n    height: 30px;\n    width: 250px; }\n\n.welcome-message {\n  text-align: center; }\n\n.header {\n  text-align: center;\n  padding: 20px;\n  border-radius: 8px;\n  grid-row: 1;\n  grid-column: 2; }\n\n.container {\n  display: grid;\n  grid-template-rows: minmax(2, 1fr);\n  grid-template-columns: repeat(3, 1fr); }\n\n.row {\n  grid-column: 2;\n  grid-row: 2; }\n\n.new-product-form {\n  grid-column: 2;\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-template-rows: minmax(2, 1fr);\n  background-color: #B0C4DE;\n  padding: 50px;\n  border-radius: 10px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); }\n\n.input-field {\n  padding: 10px 20px;\n  background: white;\n  margin: 10px auto;\n  padding: 20px;\n  display: block;\n  border-radius: 8px;\n  font-size: 1.5em;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);\n  align-items: center; }\n\n::placeholder {\n  opacity: 1;\n  color: black; }\n\n.submit-button {\n  background-color: #F08080;\n  font-size: 16px;\n  text-align: center;\n  color: white;\n  width: 300px;\n  height: 75px;\n  align-self: center;\n  padding: 20px;\n  border-radius: 8px;\n  margin-top: 20px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);\n  grid-column: 2;\n  text-decoration: none; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block;\n    background-color: black;\n    color: white;\n    padding: 10px;\n    border-radius: 8px;\n    font-size: 16px; }\n  body nav a {\n    display: inline-block;\n    margin: 1em; }\n  body form div {\n    margin: 1em;\n    display: inline-block; }\n  body input, body select {\n    height: 50px; }\n  body input, body select, body textarea {\n    width: 100%;\n    padding: 12px;\n    margin: 8px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n    border-color: lightgrey;\n    font-size: 1em;\n    color: darkgrey; }\n  body button {\n    display: block; }\n\n.welcome-message {\n  text-align: center; }\n\n.header {\n  text-align: center;\n  border-radius: 8px;\n  grid-row: 1; }\n\n.container {\n  display: grid;\n  grid-template-rows: minmax(2, 1fr);\n  grid-template-columns: .5fr 1fr .5fr; }\n\n.row {\n  grid-row: 2; }\n\n.new-product-form {\n  grid-column: 2;\n  display: grid;\n  grid-template-rows: minmax(3, 1fr);\n  border-radius: 10px; }\n\n.input-field {\n  padding: 10px 20px;\n  background: white;\n  margin: 10px auto;\n  display: block;\n  border-radius: 8px;\n  font-size: 1.5em;\n  align-items: center; }\n\n::placeholder {\n  opacity: 1;\n  color: darkgrey; }\n\n.button-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-row: 3; }\n\n.submit-button {\n  background-color: #F08080;\n  font-size: 16px;\n  text-align: center;\n  color: white;\n  height: 50px;\n  border-radius: 8px;\n  margin: 20px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);\n  grid-column: 2; }\n", ""]);
 
 // exports
 
