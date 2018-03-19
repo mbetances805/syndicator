@@ -5294,6 +5294,7 @@ var NewProductForm = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log('eventmanagers', this.props.eventManagers);
       return _react2.default.createElement(
         'div',
         { className: 'container' },
@@ -5518,9 +5519,13 @@ var mapDispatch = function mapDispatch(dispatch) {
 
 exports.default = (0, _reactRouter.withRouter)((0, _reactRedux.connect)(mapState, mapDispatch)(NewProductForm));
 
-// need to populate
 
-NewProductForm.propTypes = {};
+NewProductForm.propTypes = {
+  merchantId: _propTypes2.default.number.isRequired,
+  eventManagers: _propTypes2.default.array,
+  createProduct: _propTypes2.default.func.isRequired,
+  getEventManagers: _propTypes2.default.func.isRequired
+};
 
 /***/ }),
 /* 127 */

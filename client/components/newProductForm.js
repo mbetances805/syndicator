@@ -45,6 +45,7 @@ class NewProductForm extends Component {
   }
 
   render () {
+    console.log('eventmanagers', this.props.eventManagers)
     return (
       <div className='container'>
         <div className='new-product-form'>
@@ -179,7 +180,9 @@ const mapDispatch = dispatch => ({
 
 export default withRouter(connect(mapState, mapDispatch)(NewProductForm))
 
-// need to populate
 NewProductForm.propTypes = {
-
+  merchantId: PropTypes.number.isRequired,
+  eventManagers: PropTypes.array.isRequired,
+  createProduct: PropTypes.func.isRequired,
+  getEventManagers: PropTypes.func.isRequired
 }
