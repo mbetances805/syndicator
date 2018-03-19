@@ -5518,9 +5518,13 @@ var mapDispatch = function mapDispatch(dispatch) {
 
 exports.default = (0, _reactRouter.withRouter)((0, _reactRedux.connect)(mapState, mapDispatch)(NewProductForm));
 
-// need to populate
 
-NewProductForm.propTypes = {};
+NewProductForm.propTypes = {
+  merchantId: _propTypes2.default.number.isRequired,
+  eventManagers: _propTypes2.default.array.isRequired,
+  createProduct: _propTypes2.default.func.isRequired,
+  getEventManagers: _propTypes2.default.func.isRequired
+};
 
 /***/ }),
 /* 127 */

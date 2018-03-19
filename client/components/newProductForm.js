@@ -179,7 +179,9 @@ const mapDispatch = dispatch => ({
 
 export default withRouter(connect(mapState, mapDispatch)(NewProductForm))
 
-// need to populate
 NewProductForm.propTypes = {
-
+  merchantId: PropTypes.number.isRequired,
+  eventManagers: PropTypes.array.isRequired,
+  createProduct: PropTypes.func.isRequired,
+  getEventManagers: PropTypes.func.isRequired
 }
