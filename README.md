@@ -17,8 +17,6 @@
 
 - Due to time constraints, unable to write unit tests
 
-- An alternative to the admin panel, would've been to use a full featured framework such as Django or Sails.js. These frameworks provide easy management of models, views, serializers, URLs, etc. They also provide admin interfaces, which can be tied directly into the model for swift development
-
 - Cron job set to 5 minute interval
 
 - The form is missing data validation and validation that all fields are populated for submission
