@@ -5294,7 +5294,6 @@ var NewProductForm = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('eventmanagers', this.props.eventManagers);
       return _react2.default.createElement(
         'div',
         { className: 'container' },
@@ -5522,7 +5521,7 @@ exports.default = (0, _reactRouter.withRouter)((0, _reactRedux.connect)(mapState
 
 NewProductForm.propTypes = {
   merchantId: _propTypes2.default.number.isRequired,
-  eventManagers: _propTypes2.default.array,
+  eventManagers: _propTypes2.default.array.isRequired,
   createProduct: _propTypes2.default.func.isRequired,
   getEventManagers: _propTypes2.default.func.isRequired
 };

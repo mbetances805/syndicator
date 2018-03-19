@@ -45,7 +45,6 @@ class NewProductForm extends Component {
   }
 
   render () {
-    console.log('eventmanagers', this.props.eventManagers)
     return (
       <div className='container'>
         <div className='new-product-form'>
